@@ -7,7 +7,7 @@ const opportunities = [
   {
     icon: Building2,
     title: 'Hôtellerie de Luxe',
-    description: 'Développement d\'infrastructures hôtelières haut de gamme dans les destinations phares',
+    description: 'Développement d&apos;infrastructures hôtelières haut de gamme dans les destinations phares',
     investment: '5M - 50M USD',
     roi: '15-25%',
     highlight: true,
@@ -29,14 +29,14 @@ const opportunities = [
   {
     icon: DollarSign,
     title: 'Services Touristiques',
-    description: 'Agences de voyage, guides locaux, restaurants, activités d\'aventure',
+    description: 'Agences de voyage, guides locaux, restaurants, activités d&apos;aventure',
     investment: '100K - 5M USD',
     roi: '25-35%',
   },
 ]
 
 const incentives = [
-  'Exonérations fiscales jusqu\'à 10 ans',
+  'Exonérations fiscales jusqu&apos;à 10 ans',
   'Accès facilité aux terrains',
   'Support administratif complet',
   'Partenariats publics-privés',
@@ -64,10 +64,10 @@ export default function InvestmentOpportunities() {
       <div className="container-custom relative z-10">
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Opportunités d'Investissement
+            Opportunités d&apos;Investissement
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Le secteur touristique du Congo Brazzaville offre des opportunités d'investissement 
+            Le secteur touristique du Congo Brazzaville offre des opportunités d&apos;investissement 
             exceptionnelles avec un potentiel de croissance remarquable
           </p>
         </div>
@@ -152,5 +152,7 @@ export default function InvestmentOpportunities() {
     </section>
   )
 }
+
+
 
 

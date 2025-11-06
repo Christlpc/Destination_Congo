@@ -85,7 +85,7 @@ export default function SearchBar() {
               )}
               {query.length > 2 && results.length === 0 && (
                 <div className="px-4 py-8 text-center text-gray-500">
-                  Aucun résultat trouvé pour "{query}"
+                  Aucun résultat trouvé pour &quot;{query}&quot;
                 </div>
               )}
             </div>
@@ -95,5 +95,7 @@ export default function SearchBar() {
     </>
   )
 }
+
+
 
 

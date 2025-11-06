@@ -39,7 +39,7 @@ export default function ChatWidget() {
             <div className="space-y-4">
               <div className="bg-white p-3 rounded-lg shadow-sm">
                 <p className="text-sm text-gray-700">
-                  Bonjour ! Comment pouvons-nous vous aider aujourd'hui ?
+                  Bonjour ! Comment pouvons-nous vous aider aujourd&apos;hui ?
                 </p>
               </div>
             </div>

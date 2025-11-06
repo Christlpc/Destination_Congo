@@ -160,7 +160,7 @@ export default function VisitCongoInNumbers() {
             Le Congo en Chiffres
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez les statistiques qui font du Congo Brazzaville une destination d'exception
+            Découvrez les statistiques qui font du Congo Brazzaville une destination d&apos;exception
           </p>
         </div>
 

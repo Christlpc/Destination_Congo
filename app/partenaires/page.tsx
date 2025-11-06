@@ -66,7 +66,7 @@ export default function PartenairesPage() {
               Avantages Partenaires
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Rejoignez notre réseau de partenaires et bénéficiez d'outils professionnels
+              Rejoignez notre réseau de partenaires et bénéficiez d&apos;outils professionnels
             </p>
           </div>
 

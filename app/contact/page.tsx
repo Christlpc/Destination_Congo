@@ -162,7 +162,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-green"
                     >
                       <option value="">Sélectionnez un sujet</option>
-                      <option value="information">Demande d'information</option>
+                      <option value="information">Demande d&apos;information</option>
                       <option value="reservation">Réservation</option>
                       <option value="partnership">Partenariat</option>
                       <option value="investment">Investissement</option>

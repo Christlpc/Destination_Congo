@@ -9,7 +9,7 @@ const testimonials = [
     name: 'Marie Dubois',
     location: 'Paris, France',
     rating: 5,
-    text: 'Une expérience inoubliable ! Le Congo m\'a émerveillée par sa biodiversité et l\'accueil chaleureux de ses habitants. Je recommande vivement.',
+    text: 'Une expérience inoubliable ! Le Congo m&apos;a émerveillée par sa biodiversité et l&apos;accueil chaleureux de ses habitants. Je recommande vivement.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100',
   },
   {
@@ -66,7 +66,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-gray-600 mb-6 italic">
-                "{testimonial.text}"
+                &quot;{testimonial.text}&quot;
               </p>
               <div className="flex items-center">
                 <img

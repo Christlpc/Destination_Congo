@@ -51,7 +51,7 @@ export default function Hero() {
             <span className="text-golden-yellow">Congo</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Une aventure authentique au cœur de l'Afrique. Écotourisme, culture vivante 
+            Une aventure authentique au cœur de l&apos;Afrique. Écotourisme, culture vivante 
             et expériences inoubliables vous attendent.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -126,7 +126,7 @@ export default function Footer() {
                 type="submit"
                 className="btn-secondary whitespace-nowrap"
               >
-                S'abonner
+                S&apos;abonner
               </button>
             </form>
           </div>
@@ -154,7 +154,7 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right text-gray-300 text-sm">
               <p>&copy; {new Date().getFullYear()} Destination Congo Brazzaville. Tous droits réservés.</p>
-              <p className="mt-1">Développé par l'OPIT - Office de Promotion de l'Investissement et du Tourisme</p>
+              <p className="mt-1">Développé par l&apos;OPIT - Office de Promotion de l&apos;Investissement et du Tourisme</p>
             </div>
           </div>
         </div>

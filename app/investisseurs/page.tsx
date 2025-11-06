@@ -7,7 +7,7 @@ const investmentOpportunities = [
   {
     icon: Briefcase,
     title: 'Hôtellerie de Luxe',
-    description: 'Développement d\'infrastructures hôtelières haut de gamme',
+    description: 'Développement d&apos;infrastructures hôtelières haut de gamme',
     sector: 'Hospitalité',
   },
   {
@@ -54,7 +54,7 @@ export default function InvestisseursPage() {
             Espace Investisseurs
           </h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Opportunités d'investissement dans le secteur touristique du Congo
+            Opportunités d&apos;investissement dans le secteur touristique du Congo
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function InvestisseursPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl font-bold text-forest-green mb-4">
-              Opportunités d'Investissement
+              Opportunités d&apos;Investissement
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Découvrez les secteurs porteurs du tourisme congolais
@@ -112,7 +112,7 @@ export default function InvestisseursPage() {
               </div>
               <div className="bg-white rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-forest-green mb-2">500M$</div>
-                <div className="text-gray-600">Potentiel d'investissement</div>
+                <div className="text-gray-600">Potentiel d&apos;investissement</div>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function InvestisseursPage() {
               Contactez notre Équipe Investissement
             </h2>
             <p className="text-gray-200 mb-6 max-w-2xl">
-              Intéressé par une opportunité d'investissement ? Notre équipe est là pour vous accompagner
+              Intéressé par une opportunité d&apos;investissement ? Notre équipe est là pour vous accompagner
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?subject=investment" className="btn-secondary inline-flex items-center">

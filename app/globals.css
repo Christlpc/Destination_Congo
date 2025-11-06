@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-forest-green-dark transition-colors duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-golden-yellow text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-golden-yellow-light transition-colors duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply border-2 border-forest-green text-forest-green px-6 py-3 rounded-lg font-semibold hover:bg-forest-green hover:text-white transition-all duration-300;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-forest-green via-golden-yellow to-congo-blue bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Custom Leaflet Popup Styles */
+.custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  overflow: hidden;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+

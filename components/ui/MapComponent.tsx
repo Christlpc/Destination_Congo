@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
@@ -32,8 +33,21 @@ interface MapComponentProps {
 }
 
 export default function MapComponent({ activeFilter }: MapComponentProps) {
+  const [isMounted, setIsMounted] = useState(false)
   const allowedTypes = filterTypeMap[activeFilter] || filterTypeMap.all
   const filteredSites = touristSites.filter(site => allowedTypes.includes(site.type))
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return (
+      <div className="h-[700px] w-full bg-gray-200 rounded-lg flex items-center justify-center">
+        <p className="text-gray-500">Chargement de la carte...</p>
+      </div>
+    )
+  }
 
   return (
     <MapContainer

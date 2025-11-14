@@ -44,9 +44,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-forest-green to-golden-yellow rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">DC</span>
+                <span className="text-white font-bold text-xl">TC</span>
               </div>
-              <span className="font-display text-2xl font-bold">Destination Congo</span>
+              <span className="font-display text-2xl font-bold">TOURISM CONGO</span>
             </div>
             <p className="text-gray-300 mb-6">
               Découvrez les merveilles du Congo Brazzaville à travers des expériences authentiques 
@@ -153,7 +153,7 @@ export default function Footer() {
               })}
             </div>
             <div className="text-center md:text-right text-gray-300 text-sm">
-              <p>&copy; {new Date().getFullYear()} Destination Congo Brazzaville. Tous droits réservés.</p>
+              <p>&copy; {new Date().getFullYear()} TOURISM CONGO. Tous droits réservés.</p>
               <p className="mt-1">Développé par l&apos;OPIT - Office de Promotion de l&apos;Investissement et du Tourisme</p>
             </div>
           </div>

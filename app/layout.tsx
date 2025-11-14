@@ -5,6 +5,8 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ChatWidget from '@/components/ui/ChatWidget'
 import AOSProvider from '@/components/providers/AOSProvider'
+import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
+import { Analytics } from '@/components/providers/Analytics'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -39,12 +41,15 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
-        <AOSProvider>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <ChatWidget />
-        </AOSProvider>
+        <SmoothScrollProvider>
+          <AOSProvider>
+            <Header />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+            <ChatWidget />
+            <Analytics />
+          </AOSProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   )

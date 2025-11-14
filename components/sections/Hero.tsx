@@ -47,24 +47,21 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            Découvrez le{' '}
-            <span className="text-golden-yellow">Congo</span>
+            TOURISM CONGO
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Une aventure authentique au cœur de l&apos;Afrique. Écotourisme, culture vivante 
-            et expériences inoubliables vous attendent.
+            Un voyage entre nature, culture et authenticité.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/destinations" className="btn-secondary group">
-              Explorer les Destinations
+            <button className="btn-secondary group">
+              Explorer le pays
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link href="/planifier" className="btn-outline border-white text-white hover:bg-white hover:text-forest-green">
-              Planifier mon Voyage
-            </Link>
-            <button className="flex items-center space-x-2 px-6 py-3 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors">
-              <Play className="w-5 h-5" />
-              <span>Regarder la Vidéo</span>
+            </button>
+            <button className="btn-outline border-white text-white hover:bg-white hover:text-forest-green">
+              À propos de l&apos;OPIT
+            </button>
+            <button className="btn-outline border-white text-white hover:bg-white hover:text-forest-green">
+              Investir dans le tourisme
             </button>
           </div>
         </motion.div>

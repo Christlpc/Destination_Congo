@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 const heroImages = [
   'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920',
@@ -13,6 +14,8 @@ const heroImages = [
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
+  const t = useTranslations('hero')
+  const tCommon = useTranslations('common')
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,21 +50,21 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            TOURISM CONGO
+            {t('title')}
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Un voyage entre nature, culture et authenticité.
+            {t('subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="btn-secondary group">
-              Explorer le pays
+              {tCommon('explore')}
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="btn-outline border-white text-white hover:bg-white hover:text-forest-green">
-              À propos de l&apos;OPIT
+              {tCommon('about')}
             </button>
             <button className="btn-outline border-white text-white hover:bg-white hover:text-forest-green">
-              Investir dans le tourisme
+              {tCommon('invest')}
             </button>
           </div>
         </motion.div>

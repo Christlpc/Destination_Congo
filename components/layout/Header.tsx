@@ -2,37 +2,41 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
 import LanguageSelector from '@/components/ui/LanguageSelector'
 import SearchBar from '@/components/ui/SearchBar'
-
-const navigation = [
-  { name: 'Accueil', href: '/' },
-  { name: 'L&apos;OPIT', href: '/opit' },
-  {
-    name: 'Découvrir le congo',
-    href: '#',
-    submenu: [
-      { name: 'Destinations', href: '/destinations' },
-      { name: 'Carte interactive', href: '/carte-interactive' },
-    ],
-  },
-  { name: 'Investir dans le tourisme', href: '/investisseurs' },
-  { name: 'Actualites', href: '/actualites' },
-  {
-    name: 'Infos pratiques',
-    href: '#',
-    submenu: [
-      { name: 'Guide pratique', href: '/guide-pratique' },
-      { name: 'Contact', href: '/contact' },
-    ],
-  },
-]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const t = useTranslations('navigation')
+  const locale = useLocale()
+
+  const navigation = [
+    { name: t('home'), href: `/${locale}` },
+    { name: t('opit'), href: `/${locale}/opit` },
+    {
+      name: t('discover'),
+      href: '#',
+      submenu: [
+        { name: t('destinations'), href: `/${locale}/destinations` },
+        { name: t('interactiveMap'), href: `/${locale}/carte-interactive` },
+      ],
+    },
+    { name: t('investTourism'), href: `/${locale}/investisseurs` },
+    { name: t('news'), href: `/${locale}/actualites` },
+    {
+      name: t('practicalInfo'),
+      href: '#',
+      submenu: [
+        { name: t('guide'), href: `/${locale}/guide-pratique` },
+        { name: t('contact'), href: `/${locale}/contact` },
+      ],
+    },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,15 +73,19 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-forest-green to-golden-yellow rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">TC</span>
+          <Link href={`/${locale}`} className="flex items-center">
+            <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Tourism Congo Logo"
+                fill
+                className="object-contain"
+                priority
+                unoptimized
+              />
             </div>
-            <span className={`font-display text-2xl font-bold ${scrolled ? 'text-forest-green' : 'text-white'}`}>
-              TOURISM CONGO
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

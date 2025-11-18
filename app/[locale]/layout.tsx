@@ -10,6 +10,8 @@ import ChatWidget from '@/components/ui/ChatWidget'
 import AOSProvider from '@/components/providers/AOSProvider'
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
 import { Analytics } from '@/components/providers/Analytics'
+import { locales } from '@/i18n'
+
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -23,7 +25,7 @@ const playfair = Playfair_Display({
 })
 
 export function generateStaticParams() {
-  return [{ locale: 'fr' }, { locale: 'en' }]
+  return locales.map((locale) => ({ locale }))
 }
 
 export const metadata: Metadata = {
@@ -55,14 +57,13 @@ export default async function LocaleLayout({
   const { locale } = await params
   
   // Validate that the incoming `locale` parameter is valid
-  const validLocales = ['fr', 'en'] as const
-  if (!validLocales.includes(locale as any)) {
+  if (!locales.includes(locale as any)) {
     notFound()
   }
 
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages()
+  const messages = await getMessages({ locale })
 
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>

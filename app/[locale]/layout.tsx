@@ -10,8 +10,6 @@ import ChatWidget from '@/components/ui/ChatWidget'
 import AOSProvider from '@/components/providers/AOSProvider'
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
 import { Analytics } from '@/components/providers/Analytics'
-import { locales } from '@/i18n/request'
-
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
@@ -25,7 +23,7 @@ const playfair = Playfair_Display({
 })
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }))
+  return [{ locale: 'fr' }, { locale: 'en' }]
 }
 
 export const metadata: Metadata = {
@@ -57,7 +55,8 @@ export default async function LocaleLayout({
   const { locale } = await params
   
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) {
+  const validLocales = ['fr', 'en'] as const
+  if (!validLocales.includes(locale as any)) {
     notFound()
   }
 

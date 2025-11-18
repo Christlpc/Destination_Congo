@@ -4,36 +4,32 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
-import { useTranslations, useLocale } from 'next-intl'
-import LanguageSelector from '@/components/ui/LanguageSelector'
 import SearchBar from '@/components/ui/SearchBar'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const t = useTranslations('navigation')
-  const locale = useLocale()
 
   const navigation = [
-    { name: t('home'), href: `/${locale}` },
-    { name: t('opit'), href: `/${locale}/opit` },
+    { name: 'Accueil', href: '/' },
+    { name: "L'OPIT", href: '/opit' },
     {
-      name: t('discover'),
+      name: 'Découvrir le congo',
       href: '#',
       submenu: [
-        { name: t('destinations'), href: `/${locale}/destinations` },
-        { name: t('interactiveMap'), href: `/${locale}/carte-interactive` },
+        { name: 'Destinations', href: '/destinations' },
+        { name: 'Carte interactive', href: '/carte-interactive' },
       ],
     },
-    { name: t('investTourism'), href: `/${locale}/investisseurs` },
-    { name: t('news'), href: `/${locale}/actualites` },
+    { name: 'Investir dans le tourisme', href: '/investisseurs' },
+    { name: 'Actualites', href: '/actualites' },
     {
-      name: t('practicalInfo'),
+      name: 'Infos pratiques',
       href: '#',
       submenu: [
-        { name: t('guide'), href: `/${locale}/guide-pratique` },
-        { name: t('contact'), href: `/${locale}/contact` },
+        { name: 'Guide pratique', href: '/guide-pratique' },
+        { name: 'Contact', href: '/contact' },
       ],
     },
   ]
@@ -75,7 +71,7 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center">
+          <Link href="/" className="flex items-center">
             <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0">
               <Image
                 src="/logo.png"
@@ -137,7 +133,6 @@ export default function Header() {
             
             <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-200">
               <SearchBar />
-              <LanguageSelector />
             </div>
           </div>
 
@@ -198,9 +193,6 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <div className="px-4 py-2">
-                <LanguageSelector />
-              </div>
             </div>
           </div>
         )}
@@ -208,4 +200,3 @@ export default function Header() {
     </header>
   )
 }
-

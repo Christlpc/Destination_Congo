@@ -25,11 +25,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@react-three/fiber', '@react-three/drei'],
   },
-  // Configuration Turbopack pour next-intl
-  turbopack: {
-    root: __dirname,
-  },
 }
 
 module.exports = withNextIntl(nextConfig)
-
